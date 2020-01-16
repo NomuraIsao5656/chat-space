@@ -63,25 +63,9 @@ Things you may want to cover:
 |email|string|null: false|
 |password|string|null: false|
 |name|string|null: false|
-|group_id|integer||
 ### Association
 - has_many :groups,  through:  :groups_users
 - has_many :messages,  through:  :users_messages
 
-## users_messagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|string|null: false|
-|message_id|string|null: false|
-### Association
-- belongs_to :message
-- belongs_to :user
 
-## groups_messagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|group_id|string|null: false|
-|message_id|string|null: false|
-### Association
-- belongs_to :message
-- belongs_to :group
+
