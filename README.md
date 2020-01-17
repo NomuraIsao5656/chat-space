@@ -51,7 +51,6 @@ Things you may want to cover:
 |------|----|-------|
 |name|stringstring|null: false|
 
-
 ### Association
 - has_many :users,  through:  :groups_users
 - has_many :messages,  through:  :groups_messages
@@ -63,9 +62,10 @@ Things you may want to cover:
 |email|string|null: false|
 |password|string|null: false|
 |name|string|null: false|
+
 ### Association
 - has_many :groups,  through:  :groups_users
-- has_many :messages,  through:  :users_messages
+- has_many :messages
 
 
 
