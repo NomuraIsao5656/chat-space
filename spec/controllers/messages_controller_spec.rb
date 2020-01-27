@@ -20,7 +20,7 @@ describe MessagesController do
       it 'redners index' do	
         expect(response).to render_template :index	
       end	
-    end	
+    end  
 
     context 'not log in' do	
       before do	
@@ -72,6 +72,7 @@ describe MessagesController do
           expect(response).to redirect_to(new_user_session_path)	
         end	
       end	
+
       
     end	
   end	
