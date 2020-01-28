@@ -1,7 +1,5 @@
 $(function(){ 
 
-  // console.log(last_message_id);
-
   function buildHTML(message){
    if ( message.image ) {
      var html =
@@ -43,7 +41,6 @@ $(function(){
    };
  }
 $('#new_message').on('submit', function(e){
-  console.log("OK");
  e.preventDefault();
  var formData = new FormData(this);
  var url = $(this).attr('action')
@@ -91,12 +88,10 @@ $('#new_message').on('submit', function(e){
       //メッセージが入ったHTMLに、入れ物ごと追加
         $('.messages').append(insertHTML);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-        $("#new_message")[0].reset();
-        $(".form__submit").prop("disabled", false);
       }
     })
     .fail(function() {
-      console.log('error');
+      console.log('alert');
     });
   }
 // $(function(){});の閉じタグの直上(処理の最後)に以下のように追記
